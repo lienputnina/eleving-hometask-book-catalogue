@@ -1,4 +1,5 @@
 <template>
+  <HeaderComponent />
   <SearchComponent />
   <h2>Explore books</h2>
   <div>
@@ -6,7 +7,18 @@
   </div>
 </template>
 
-<script lang="ts"></script>
+<script lang="ts">
+import HeaderComponent from "~/components/HeaderComponent.vue";
+import SearchComponent from "~/components/SearchComponent.vue";
+
+export default {
+  name: "Index",
+  components: {
+    SearchComponent,
+    HeaderComponent,
+  },
+};
+</script>
 
 <style>
 div {

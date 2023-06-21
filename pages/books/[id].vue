@@ -1,4 +1,5 @@
 <template>
+  <HeaderComponent />
   <div class="book-details-main">
     <div>Book details for {{ id }}</div>
     <div class="book-details">
@@ -13,6 +14,8 @@
 </template>
 
 <script setup>
+import HeaderComponent from "~/components/HeaderComponent.vue";
+
 const { id } = useRoute().params;
 const uri = "http://localhost:5000/books/" + id;
 
