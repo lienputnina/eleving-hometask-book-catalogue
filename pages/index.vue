@@ -4,19 +4,9 @@
   <div>
     <img src="../assets/ColouredBooks.png" alt="colored-books" />
   </div>
-  <NuxtLink to="/singleBook"> Single Book Page </NuxtLink>
 </template>
 
-<script lang="ts">
-// import SearchComponent from "~/.nuxt/components/SearchComponent.vue";
-
-// export default {
-//   name: "Index",
-//   components: {
-//     SearchComponent,
-//   },
-// };
-</script>
+<script lang="ts"></script>
 
 <style>
 div {

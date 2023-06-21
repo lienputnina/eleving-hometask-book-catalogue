@@ -9,7 +9,8 @@
       "rating": 4.3,
       "publisher": "J. B. Lippincott & Co.",
       "isbn": "9780446310789",
-      "price": "29.99€"
+      "price": "29.99€",
+      "year": "1995"
     },
     {
       "id": 2,
@@ -20,7 +21,8 @@
       "rating": 4.1,
       "publisher": "Secker & Warburg",
       "isbn": "9780451524935",
-      "price": "39.99€"
+      "price": "39.99€",
+      "year": "1995"
     },
     {
       "id": 3,
@@ -31,7 +33,8 @@
       "rating": 4.6,
       "publisher": "T. Egerton, Whitehall",
       "isbn": "9780486284736",
-      "price": "19.99€"
+      "price": "19.99€",
+      "year": "1995"
     },
     {
       "id": 4,
@@ -42,7 +45,8 @@
       "rating": 3.9,
       "publisher": "Charles Scribner's Sons",
       "isbn": "9780743273565",
-      "price": "24.99€"
+      "price": "24.99€",
+      "year": "1995"
     },
     {
       "id": 5,
@@ -53,7 +57,8 @@
       "rating": 3.5,
       "publisher": "Harper & Brothers",
       "isbn": "9781503280786",
-      "price": "34.99€"
+      "price": "34.99€",
+      "year": "1995"
     },
     {
       "id": 6,
@@ -64,7 +69,8 @@
       "rating": 4.1,
       "publisher": "The Russian Messenger",
       "isbn": "9781400079988",
-      "price": "49.99€"
+      "price": "49.99€",
+      "year": "1995"
     },
     {
       "id": 7,
@@ -75,7 +81,8 @@
       "rating": 3.8,
       "publisher": "Little, Brown and Company",
       "isbn": "9780316769488",
-      "price": "29.99€"
+      "price": "29.99€",
+      "year": "1995"
     },
     {
       "id": 8,
@@ -86,7 +93,8 @@
       "rating": 3.7,
       "publisher": "Sylvia Beach",
       "isbn": "9781840226355",
-      "price": "39.99€"
+      "price": "39.99€",
+      "year": "1995"
     },
     {
       "id": 9,
@@ -97,7 +105,8 @@
       "rating": 3.9,
       "publisher": "In the Public Domain",
       "isbn": "9780140268867",
-      "price": "24.99€"
+      "price": "24.99€",
+      "year": "1995"
     },
     {
       "id": 10,
@@ -108,7 +117,8 @@
       "rating": 4.3,
       "publisher": "Grasset and Gallimard",
       "isbn": "9780142437964",
-      "price": "59.99€"
+      "price": "59.99€",
+      "year": "1995"
     },
     {
       "id": 11,
@@ -119,7 +129,8 @@
       "rating": 3.8,
       "publisher": "Chapman & Hall",
       "isbn": "9781853260391",
-      "price": "34.99€"
+      "price": "34.99€",
+      "year": "1995"
     },
     {
       "id": 12,
@@ -130,7 +141,8 @@
       "rating": 4.2,
       "publisher": "A. Lacroix, Verboeckhoven & Ce",
       "isbn": "9780451419439",
-      "price": "39.99€"
+      "price": "39.99€",
+      "year": "1995"
     },
     {
       "id": 13,
@@ -141,7 +153,8 @@
       "rating": 4.3,
       "publisher": "The Russian Messenger",
       "isbn": "9780486437910",
-      "price": "44.99€"
+      "price": "44.99€",
+      "year": "1995"
     },
     {
       "id": 14,
@@ -152,7 +165,8 @@
       "rating": 4.2,
       "publisher": "The Russian Messenger",
       "isbn": "9780486415871",
-      "price": "29.99€"
+      "price": "29.99€",
+      "year": "1995"
     },
     {
       "id": 15,
@@ -163,7 +177,8 @@
       "rating": 3.9,
       "publisher": "Francisco de Robles",
       "isbn": "9780142437230",
-      "price": "49.99€"
+      "price": "49.99€",
+      "year": "1995"
     },
     {
       "id": 16,
@@ -174,7 +189,8 @@
       "rating": 3.8,
       "publisher": "Thomas Cautley Newby",
       "isbn": "9780141439556",
-      "price": "24.99€"
+      "price": "24.99€",
+      "year": "1995"
     },
     {
       "id": 17,
@@ -185,7 +201,8 @@
       "rating": 4.3,
       "publisher": "The Russian Messenger",
       "isbn": "9780140449242",
-      "price": "39.99€"
+      "price": "39.99€",
+      "year": "1995"
     }
   ]
 }

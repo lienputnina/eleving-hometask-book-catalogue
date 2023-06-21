@@ -4,6 +4,7 @@
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
+    "backend": "json-server --watch books.json --port 5000",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
@@ -12,5 +13,9 @@
     "@nuxt/devtools": "latest",
     "@types/node": "^18",
     "nuxt": "^3.5.2"
+  },
+  "dependencies": {
+    "install": "^0.13.0",
+    "json-server": "^0.17.3"
   }
 }
