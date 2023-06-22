@@ -3,6 +3,14 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   components: {
     global: true,
-    dirs: ["~/components"],
+    dirs: ['~/components'],
+  },
+  modules: ['@nuxtjs/tailwindcss'],
+  css: ['~/assets/css/main.css'],
+  postcss: {
+    plugins: {
+      tailwindcss: {},
+      autoprefixer: {},
+    },
   },
 });
