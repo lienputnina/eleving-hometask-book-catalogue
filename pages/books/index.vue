@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div v-for="book in books">
+    <div v-for="book in books" :key="`${book.id}`">
       <NuxtLink :to="`/books/${book.id}`">{{ book.title }}</NuxtLink>
     </div>
   </div>

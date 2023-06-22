@@ -6,6 +6,12 @@
 - Data is visualized with a list of Single Book cards (SingleBookCard component)
 - On top of the list is the number of corresponding results
 
+### User behavior:
+
+- User writes stuff in the search bar
+- Presses ENTER
+- Sees results
+
 ## Book data:
 
 - Download all the images for books
