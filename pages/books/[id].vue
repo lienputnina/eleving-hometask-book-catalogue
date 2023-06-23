@@ -1,35 +1,27 @@
 <template>
-  <HeaderComponent />
-  <div class="book-details-main">
-    <div>Book details for {{ id }}</div>
-    <div class="book-details">
-      <p>{{ book.image }}</p>
-      <p>{{ book.title }}</p>
-      <p>{{ book.author }}</p>
-      <p>{{ book.price }}</p>
-      <p>{{ book.year }}</p>
-      <p>{{ book.publisher }}</p>
+  <div class="flex flex-row m-1.5">
+    <img
+      src="../../assets/images/facebookScrabble.jpeg"
+      class="w-20 h-28 rounded mt-1"
+    />
+    <div class="px-3 py-2">
+      <p class="font-bold">{{ book.title }}</p>
+      <p class="text-slate-600">{{ book.author }}</p>
+      <p class="font-bold">{{ book.price }}</p>
+      <p class="text-slate-600">{{ book.year }}</p>
+      <p class="text-slate-600">{{ book.publisher }}</p>
     </div>
   </div>
+  <div class="flex flex-row mt-5 mb-5 ml-2 self-center">
+    <p class="text-slate-700 mr-2">{{ book.rating }}</p>
+    <img src="../../assets/images/rating.png" class="w-24 h-5" />
+  </div>
+  <p class="text-slate-700 text-left ml-2">{{ book.description }}</p>
 </template>
 
 <script setup>
-import HeaderComponent from "~/components/HeaderComponent.vue";
-
 const { id } = useRoute().params;
-const uri = "http://localhost:5000/books/" + id;
+const uri = 'http://localhost:5000/books/' + id;
 
 const { data: book } = await useFetch(uri);
 </script>
-
-<style scoped>
-.book-details-main {
-  margin: 15px;
-}
-.book-details {
-  border: 2px solid black;
-  width: fit-content;
-  padding: 10px;
-  margin-top: 10px;
-}
-</style>

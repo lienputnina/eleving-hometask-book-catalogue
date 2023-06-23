@@ -31,7 +31,7 @@
         class="font-bold hover:text-slate-600"
         >{{ book.title }}</NuxtLink
       >
-      <p class="text-slate-700">{{ book.author }}</p>
+      <p class="text-slate-600">{{ book.author }}</p>
       <p class="text-slate-600">{{ book.year }}</p>
       <p class="font-bold">{{ book.price }}</p>
     </div>
