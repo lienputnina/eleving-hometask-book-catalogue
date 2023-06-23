@@ -20,22 +20,24 @@
     <img src="../assets/images/colouredBooks.png" alt="coloured-books" />
   </div>
   <!--FILTERED Books -->
-  <div class="flex flex-row m-1.5 w-fit" v-for="book in filteredData">
-    <img
-      src="../assets/images/facebookScrabble.jpeg"
-      class="w-20 h-28 rounded"
-    />
-    <div class="p-3">
-      <NuxtLink
-        :to="`/books/${book.id}`"
-        class="font-bold hover:text-slate-600"
-        >{{ book.title }}</NuxtLink
-      >
-      <p class="text-slate-600">{{ book.author }}</p>
-      <p class="text-slate-600">{{ book.year }}</p>
-      <p class="font-bold">{{ book.price }}</p>
-    </div>
-  </div>
+  <ul v-for="book in filteredData">
+    <li class="flex flex-row m-1.5 w-fit">
+      <img
+        src="../assets/images/facebookScrabble.jpeg"
+        class="w-20 h-28 rounded"
+      />
+      <div class="p-3">
+        <NuxtLink
+          :to="`/books/${book.id}`"
+          class="font-bold hover:text-slate-600"
+          >{{ book.title }}</NuxtLink
+        >
+        <p class="text-slate-600">{{ book.author }}</p>
+        <p class="text-slate-600">{{ book.year }}</p>
+        <p class="font-bold">{{ book.price }}</p>
+      </div>
+    </li>
+  </ul>
 </template>
 
 <script setup lang="ts">
