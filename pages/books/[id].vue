@@ -1,6 +1,10 @@
 <template>
   <div class="flex flex-row m-1.5">
-    <img :src="book.image" class="w-28 h-28 rounded mt-1" />
+    <img
+      :src="book.image"
+      class="w-28 h-28 rounded mt-1"
+      al="book cover image"
+    />
     <div class="px-3 py-2 text-sm">
       <p class="font-bold">{{ book.title }}</p>
       <p class="text-slate-600">{{ book.author }}</p>
@@ -19,6 +23,7 @@
 
 <script setup>
 import Review from '../../components/Review.vue';
+
 const { id } = useRoute().params;
 const uri = 'http://localhost:5000/books/' + id;
 

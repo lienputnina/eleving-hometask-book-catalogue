@@ -1,16 +1,16 @@
 <template>
   <input
     id="book-search"
+    name="book-search"
+    type="search"
+    placeholder="Search for a book"
     class="flex flex-grow border-slate-200 border-2 rounded h-8 text-slate-700 py-4 pl-9 bg-transparent w-full max-w-lg"
     style="
       background-image: url(../assets/images/search.png);
       background-repeat: no-repeat;
       background-position-y: center;
     "
-    name="book-search"
-    type="search"
     v-model="userSearchInput"
-    placeholder="Search for a book"
   />
   <div class="mt-4 text-slate-500 text-sm ml-1" v-if="userSearchInput">
     <p>{{ resultsNumber }} results</p>
@@ -19,7 +19,7 @@
     <h2 class="text-slate-950 mb-6 font-bold text-2xl">Explore books</h2>
     <img
       src="../assets/images/colouredBooks.png"
-      alt="coloured-books"
+      alt="stack of colorful books"
       class="w-32 h-32 max-h-sm max-w-sm"
     />
   </div>

@@ -17,6 +17,5 @@
 
 ## Other
 
+- Accessibility
 - Update README
-- Delete dummy test reviews
-- Improve app structure

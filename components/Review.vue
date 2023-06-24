@@ -2,16 +2,22 @@
   <div class="mt-7 mx-1.5">
     <div>
       <h1 class="text-xl font-bold mb-5">Write a review</h1>
-      <div>
-        <h2 class="font-bold mb-2">Rate the book</h2>
-        <img src="../../assets/images/rating.png" class="w-24 h-5" />
-      </div>
     </div>
     <form class="flex flex-col w-full max-w-sm mt-4">
+      <label id="review-label" class="font-bold mb-5">
+        Rate the book
+        <img
+          src="../../assets/images/rating.png"
+          alt="book rating stars"
+          class="w-24 h-5 mt-2"
+        />
+      </label>
       <input
+        id="review-input"
         type="text"
         class="border-slate-200 border-2 rounded p-1.5 w-full"
         v-model="userInput"
+        aria-labelledby="review-label"
       />
       <button
         class="border-cyan-700 border-2 rounded-2xl w-full p-1.5 mt-4 text-sm text-cyan-700 font-bold"
@@ -33,6 +39,7 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue';
+
 const { book, id } = defineProps(['book', 'id']);
 
 let bookWithReview = book;
