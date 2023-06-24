@@ -1,42 +1,25 @@
-## Development Server
+# Overview
 
-Start the development server on `http://localhost:3000`:
+Hello, fellow developers!
 
-```bash
-# npm
-npm run dev
+I have tried my best to complete every task in this homework. It's been challenging from many aspects.
+I've implemented the Book Details page, a part of Book Review option and a part of the search functionality. Unfortunately, I did not manage to complete everything.
 
-# pnpm
-pnpm run dev
+However, I have learned a lot during the making of this project and I'm sure this knowledge will aid me in the future.
+Thanks for the challenge!
 
-# yarn
+## Usage
+
+There is no production mode for now.
+
+To run the app in the **development** mode on the client side, run:
+
+```shell
 yarn dev
 ```
 
-## Production
+To run the database, run:
 
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
+```shell
+yarn backend
 ```

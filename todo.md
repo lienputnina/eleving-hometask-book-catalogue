@@ -7,15 +7,14 @@
 
 - Get image from key-value link
 
+## Review component:
+
+- Enable rating books
+
 ## Single book page:
 
-- Update stars to match the actual reviews
+- Update rating stars to match the actual reviews
 
 ## Review component:
 
 - Stars to click
-
-## Other
-
-- Accessibility
-- Update README
