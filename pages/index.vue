@@ -9,18 +9,18 @@
     "
     name="book-search"
     type="search"
-    v-model="userInput"
+    v-model="userSearchInput"
     placeholder="Search for a book"
   />
   <div class="mt-4 text-slate-500 text-sm ml-1">
     <p>{{ resultsNumber }} results</p>
   </div>
-  <div class="mt-2 mb-7 flex flex-col w-fit" v-if="!userInput">
+  <div class="mt-2 mb-7 flex flex-col w-fit" v-if="!userSearchInput">
     <h2 class="text-slate-950 mb-6 font-bold text-2xl">Explore books</h2>
     <img src="../assets/images/colouredBooks.png" alt="coloured-books" />
   </div>
   <!--FILTERED Books -->
-  <ul v-for="book in filteredData">
+  <ul v-for="book in filteredBooks">
     <li class="flex flex-row m-1.5 w-fit">
       <img
         src="../assets/images/facebookScrabble.jpeg"
@@ -45,20 +45,20 @@ import { ref } from 'vue';
 import '../assets/css/main.css';
 
 let resultsNumber = 1;
-let filteredData;
+
+let filteredBooks;
 
 const { data } = await useFetch<GetBooksResponse>(
   'http://localhost:5000/books/',
   {
     onResponse({ request, response, options }) {
-      filteredData = response._data.filter((book: Book) =>
+      filteredBooks = response._data.filter((book: Book) =>
         book.title.toLowerCase().includes('war'),
       );
     },
   },
 );
-
-let userInput = ref('');
+let userSearchInput = ref('');
 
 export interface Book {
   id: number;

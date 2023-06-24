@@ -33,7 +33,7 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue';
-const { book, id, refresh } = defineProps(['book', 'id', 'refresh']);
+const { book, id } = defineProps(['book', 'id']);
 
 let bookWithReview = book;
 
