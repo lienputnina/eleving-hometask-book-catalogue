@@ -1,7 +1,7 @@
 <template>
   <input
     id="book-search"
-    class="flex flex-grow border-slate-200 border-2 rounded h-8 text-slate-700 py-4 pl-9 bg-transparent"
+    class="flex flex-grow border-slate-200 border-2 rounded h-8 text-slate-700 py-4 pl-9 bg-transparent w-full max-w-lg"
     style="
       background-image: url(../assets/images/search.png);
       background-repeat: no-repeat;
@@ -12,21 +12,24 @@
     v-model="userSearchInput"
     placeholder="Search for a book"
   />
-  <div class="mt-4 text-slate-500 text-sm ml-1">
+  <div class="mt-4 text-slate-500 text-sm ml-1" v-if="userSearchInput">
     <p>{{ resultsNumber }} results</p>
   </div>
-  <div class="mt-2 mb-7 flex flex-col w-fit" v-if="!userSearchInput">
+  <div class="mt-6 mb-7 flex flex-col w-full" v-if="!userSearchInput">
     <h2 class="text-slate-950 mb-6 font-bold text-2xl">Explore books</h2>
-    <img src="../assets/images/colouredBooks.png" alt="coloured-books" />
+    <img
+      src="../assets/images/colouredBooks.png"
+      alt="coloured-books"
+      class="w-32 h-32 max-h-sm max-w-sm"
+    />
   </div>
-  <!--FILTERED Books -->
   <ul v-for="book in filteredBooks">
     <li class="flex flex-row m-1.5 w-fit">
       <img
         src="../assets/images/facebookScrabble.jpeg"
         class="w-20 h-28 rounded"
       />
-      <div class="p-3 text-sm">
+      <div class="p-3">
         <NuxtLink
           :to="`/books/${book.id}`"
           class="font-bold hover:text-slate-600"

@@ -1,9 +1,9 @@
 ## Search component:
 
-- Filter by title - array.filter() + array.includes(some string)
+- Filter by title based upon user search input
 - Update results number with real data
 
-## Book data:
+## Book data on Index:
 
 - Get image from key-value link
 
@@ -14,15 +14,9 @@
 ## Review component:
 
 - Stars to click
-- Review form => text field + submit button
-- Add the "Review submitted" element
-
-## Responsiveness
-
-- Make the app responsive for different screen sizes
 
 ## Other
 
-- Add error handling
 - Update README
-- Delete bullshit test reviews
+- Delete dummy test reviews
+- Improve app structure

@@ -7,10 +7,10 @@
         <img src="../../assets/images/rating.png" class="w-24 h-5" />
       </div>
     </div>
-    <form class="flex flex-col max-w-xs mt-4">
+    <form class="flex flex-col w-full max-w-sm mt-4">
       <input
         type="text"
-        class="border-slate-200 border-2 rounded p-1.5"
+        class="border-slate-200 border-2 rounded p-1.5 w-full"
         v-model="userInput"
       />
       <button
