@@ -12,7 +12,7 @@
     v-model="userInput"
     placeholder="Search for a book"
   />
-  <div class="mt-4 text-slate-500">
+  <div class="mt-4 text-slate-500 text-sm ml-1">
     <p>{{ resultsNumber }} results</p>
   </div>
   <div class="mt-2 mb-7 flex flex-col w-fit" v-if="!userInput">
@@ -26,7 +26,7 @@
         src="../assets/images/facebookScrabble.jpeg"
         class="w-20 h-28 rounded"
       />
-      <div class="p-3">
+      <div class="p-3 text-sm">
         <NuxtLink
           :to="`/books/${book.id}`"
           class="font-bold hover:text-slate-600"
@@ -51,7 +51,7 @@ const { data } = await useFetch<GetBooksResponse>(
   'http://localhost:5000/books/',
   {
     onResponse({ request, response, options }) {
-      filteredData = response._data.filter((book) =>
+      filteredData = response._data.filter((book: Book) =>
         book.title.toLowerCase().includes('war'),
       );
     },
@@ -60,7 +60,7 @@ const { data } = await useFetch<GetBooksResponse>(
 
 let userInput = ref('');
 
-interface Book {
+export interface Book {
   id: number;
   title: string;
   author: string;
@@ -71,9 +71,10 @@ interface Book {
   isbn: string;
   price: string;
   year: string;
+  review: string[];
 }
 
-interface GetBooksResponse {
+export interface GetBooksResponse {
   books: Book[];
 }
 </script>

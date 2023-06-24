@@ -1,10 +1,7 @@
 <template>
   <div class="flex flex-row m-1.5">
-    <img
-      src="../../assets/images/facebookScrabble.jpeg"
-      class="w-20 h-28 rounded mt-1"
-    />
-    <div class="px-3 py-2">
+    <img :src="book.image" class="w-20 h-28 rounded mt-1" />
+    <div class="px-3 py-2 text-sm">
       <p class="font-bold">{{ book.title }}</p>
       <p class="text-slate-600">{{ book.author }}</p>
       <p class="font-bold">{{ book.price }}</p>
@@ -16,10 +13,12 @@
     <p class="text-slate-700 mr-2">{{ book.rating }}</p>
     <img src="../../assets/images/rating.png" class="w-24 h-5" />
   </div>
-  <p class="text-slate-700 text-left ml-2">{{ book.description }}</p>
+  <p class="text-slate-700 text-left ml-2 text-sm">{{ book.description }}</p>
+  <Review :book="book" :id="id" />
 </template>
 
 <script setup>
+import Review from '../../components/Review.vue';
 const { id } = useRoute().params;
 const uri = 'http://localhost:5000/books/' + id;
 

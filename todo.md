@@ -1,7 +1,7 @@
 ## Search component:
 
 - Filter by title - array.filter() + array.includes(some string)
-- On top of the list is the number of corresponding results - updated with real data
+- Update results number with real data
 
 ## Book data:
 
@@ -9,13 +9,20 @@
 
 ## Single book page:
 
-- Create a Review component
 - Update stars to match the actual reviews
 
 ## Review component:
 
-- Title
-- Subtitle
 - Stars to click
 - Review form => text field + submit button
-- Submitted review POSTS to the json db => a new array with an object
+- Add the "Review submitted" element
+
+## Responsiveness
+
+- Make the app responsive for different screen sizes
+
+## Other
+
+- Add error handling
+- Update README
+- Delete bullshit test reviews

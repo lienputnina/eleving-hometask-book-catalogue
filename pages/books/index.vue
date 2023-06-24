@@ -7,7 +7,7 @@
 </template>
 
 <script setup>
-const { data: books } = await useFetch("http://localhost:5000/books");
+const { data: books } = await useFetch('http://localhost:5000/books/');
 </script>
 
 <style scoped></style>
