@@ -72,6 +72,6 @@ export interface Book {
   isbn: string;
   price: string;
   year: string;
-  review: string[];
+  reviews: string[];
 }
 </script>
