@@ -10,12 +10,12 @@
       background-repeat: no-repeat;
       background-position-y: center;
     "
-    v-model="userSearchInput"
+    v-model="searchInput"
   />
-  <div class="mt-4 text-slate-500 text-sm ml-1" v-if="userSearchInput">
-    <p>{{ resultsNumber }} results</p>
+  <div class="mt-4 text-slate-500 text-sm ml-1" v-if="searchInput">
+    <p>{{ filteredBooks().length }} results</p>
   </div>
-  <div class="mt-6 mb-7 flex flex-col w-full" v-if="!userSearchInput">
+  <div class="mt-6 mb-7 flex flex-col w-full" v-if="!searchInput">
     <h2 class="text-slate-950 mb-6 font-bold text-2xl">Explore books</h2>
     <img
       src="../assets/images/colouredBooks.png"
@@ -23,23 +23,22 @@
       class="w-32 h-32 max-h-sm max-w-sm"
     />
   </div>
-  <ul v-for="book in filteredBooks">
-    <li class="flex flex-row m-1.5 w-fit">
-      <img
-        src="../assets/images/facebookScrabble.jpeg"
-        class="w-20 h-28 rounded"
-      />
-      <div class="p-3">
-        <NuxtLink
-          :to="`/books/${book.id}`"
-          class="font-bold hover:text-slate-600"
-          >{{ book.title }}</NuxtLink
-        >
-        <p class="text-slate-600">{{ book.author }}</p>
-        <p class="text-slate-600">{{ book.year }}</p>
-        <p class="font-bold">{{ book.price }}</p>
-      </div>
-    </li>
+  <ul v-if="searchInput" v-for="book in filteredBooks()" :key="book.id">
+    <NuxtLink :to="`/books/${book.id}`">
+      <li class="flex flex-row m-1.5 w-fit">
+        <img :src="book.image" class="w-28 h-28 rounded" />
+        <div class="p-3">
+          <NuxtLink
+            :to="`/books/${book.id}`"
+            class="font-bold hover:text-slate-600"
+            >{{ book.title }}</NuxtLink
+          >
+          <p class="text-slate-600">{{ book.author }}</p>
+          <p class="text-slate-600">{{ book.year }}</p>
+          <p class="font-bold">{{ book.price }}</p>
+        </div>
+      </li>
+    </NuxtLink>
   </ul>
 </template>
 
@@ -47,21 +46,20 @@
 import { ref } from 'vue';
 import '../assets/css/main.css';
 
-let resultsNumber = 1;
+const searchInput = ref('');
+const books = useState<Book[]>('books', () => []);
 
-let filteredBooks;
-
-const { data } = await useFetch<GetBooksResponse>(
-  'http://localhost:5000/books/',
-  {
-    onResponse({ request, response, options }) {
-      filteredBooks = response._data.filter((book: Book) =>
-        book.title.toLowerCase().includes('war'),
-      );
-    },
+useFetch<Book[]>('http://localhost:5000/books/', {
+  onResponse({ request, response, options }) {
+    books.value = response._data;
   },
-);
-let userSearchInput = ref('');
+});
+
+const filteredBooks = (): Book[] => {
+  return books.value.filter((book: Book) =>
+    book.title.toLowerCase().includes(searchInput.value.toLowerCase()),
+  );
+};
 
 export interface Book {
   id: number;
@@ -75,9 +73,5 @@ export interface Book {
   price: string;
   year: string;
   review: string[];
-}
-
-export interface GetBooksResponse {
-  books: Book[];
 }
 </script>
