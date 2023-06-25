@@ -22,11 +22,17 @@
     <img src="../../assets/images/rating.png" class="w-24 h-5" />
   </div>
   <p class="text-slate-700 text-left ml-2 text-sm">{{ book.description }}</p>
-  <Review :book="book" :id="id" />
+  <div class="mx-1.5 mt-1.5">
+    <h1 class="font-bold mb-1">Customer reviews:</h1>
+    <ul v-for="review in book.reviews">
+      <li>"{{ review }}"</li>
+    </ul>
+  </div>
+  <AddReview :book="book" :id="id" />
 </template>
 
 <script setup>
-import Review from '../../components/Review.vue';
+import AddReview from '../../components/AddReview.vue';
 
 const { id } = useRoute().params;
 const uri = 'http://localhost:5000/books/' + id;

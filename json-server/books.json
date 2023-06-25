@@ -34,7 +34,11 @@
       "publisher": "T. Egerton, Whitehall",
       "isbn": "9780486284736",
       "price": "19.99€",
-      "year": "1995"
+      "reviews": [
+        "Nice language flow.",
+        "Too many words.",
+        "Good analysis of the social situations of men and women."
+      ]
     },
     {
       "id": 4,

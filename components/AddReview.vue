@@ -1,9 +1,7 @@
 <template>
-  <div class="mt-7 mx-1.5">
-    <div>
-      <h1 class="text-xl font-bold mb-5">Write a review</h1>
-    </div>
-    <form class="flex flex-col w-full max-w-sm mt-4">
+  <div class="mt-6 mx-1.5">
+    <form class="flex flex-col w-full max-w-sm mt-4" v-if="!isReviewSubmitted">
+      <h2 class="text-xl font-bold mb-4">Write a review</h2>
       <label id="review-label" class="font-bold mb-5">
         Rate the book
         <img
@@ -16,24 +14,24 @@
         id="review-input"
         type="text"
         class="border-slate-200 border-2 rounded p-1.5 w-full"
-        v-model="userInput"
+        v-model="reviewText"
         aria-labelledby="review-label"
       />
       <button
         class="border-cyan-700 border-2 rounded-2xl w-full p-1.5 mt-4 text-sm text-cyan-700 font-bold"
         type="button"
         @click="onSubmit()"
-        v-if="!isReviewSubmitted"
       >
         Submit review
       </button>
-      <p
-        v-if="isReviewSubmitted"
-        class="bg-sky-200 rounded-md py-1 px-1.5 font-bold mt-8 w-fit"
-      >
-        Thank you! Review received.
-      </p>
+      <!-- <p v-if="!reviewText">Please add a review.</p> -->
     </form>
+    <p
+      class="bg-sky-200 rounded-md py-1 px-1.5 font-bold mt-8 w-fit"
+      v-if="isReviewSubmitted"
+    >
+      Thank you! Review received.
+    </p>
   </div>
 </template>
 
@@ -43,18 +41,16 @@ import { ref } from 'vue';
 const { book, id } = defineProps(['book', 'id']);
 
 let bookWithReview = book;
-
-let userInput = ref('');
-
+let reviewText = ref('');
 let isReviewSubmitted: boolean = false;
 
 const onSubmit = async () => {
-  if (!userInput.value) {
+  if (!reviewText.value) {
     alert('Please add a review');
   } else {
     const newBook = {
       ...bookWithReview,
-      review: [...(bookWithReview.review || []), userInput.value],
+      reviews: [...(bookWithReview.reviews || []), reviewText.value],
     };
 
     await $fetch(`http://localhost:5000/books/${id}`, {
@@ -71,6 +67,6 @@ const onSubmit = async () => {
 
   isReviewSubmitted = true;
 
-  userInput.value = '';
+  reviewText.value = '';
 };
 </script>
