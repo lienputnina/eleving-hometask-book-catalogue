@@ -24,21 +24,20 @@
     />
   </div>
   <ul v-if="searchInput" v-for="book in filteredBooks()" :key="book.id">
-    <NuxtLink :to="`/books/${book.id}`">
-      <li class="flex flex-row m-1.5 w-fit">
+    <li>
+      <NuxtLink
+        :to="`/books/${book.id}`"
+        class="flex flex-row m-1.5 w-full max-w-lg focus-visible:outline-dashed outline-offset-4 hover:bg-slate-100 rounded"
+      >
         <img :src="book.image" class="w-28 h-28 rounded" />
         <div class="p-3">
-          <NuxtLink
-            :to="`/books/${book.id}`"
-            class="font-bold hover:text-slate-600"
-            >{{ book.title }}</NuxtLink
-          >
+          <h2 class="font-bold">{{ book.title }}</h2>
           <p class="text-slate-600">{{ book.author }}</p>
           <p class="text-slate-600">{{ book.year }}</p>
           <p class="font-bold">{{ book.price }}</p>
         </div>
-      </li>
-    </NuxtLink>
+      </NuxtLink>
+    </li>
   </ul>
 </template>
 

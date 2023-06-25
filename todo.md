@@ -1,12 +1,3 @@
-## Search component:
-
-- Filter by title based upon user search input
-- Update results number with real data
-
-## Book data on Index:
-
-- Get image from key-value link
-
 ## Review component:
 
 - Enable rating books
@@ -17,4 +8,16 @@
 
 ## Review component:
 
-- Stars to click
+### Existing stars:
+
+- 5 separate star images
+- Convert them to svg
+- Retrieve the fill value (pass as a prop)
+- If a star was clicked, it is filled
+
+### Stars to click:
+
+- Click x number of stars. This is saved in a variable
+- When the user submits the review:
+- A PUT request is sent to db with the new rating value.
+- The existing rating is updated with the new value
