@@ -10,7 +10,8 @@
       "publisher": "J. B. Lippincott & Co.",
       "isbn": "9780446310789",
       "price": "29.99€",
-      "year": "1995"
+      "year": "1995",
+      "reviews": ["No bird was killed. Confusing."]
     },
     {
       "id": 2,
@@ -22,7 +23,8 @@
       "publisher": "Secker & Warburg",
       "isbn": "9780451524935",
       "price": "39.99€",
-      "year": "1995"
+      "year": "1995",
+      "reviews": ["USSR taken to the extreme."]
     },
     {
       "id": 3,
@@ -35,7 +37,6 @@
       "isbn": "9780486284736",
       "price": "19.99€",
       "reviews": [
-        "Nice language flow.",
         "Too many words.",
         "Good analysis of the social situations of men and women.",
         "Good book.",

@@ -8,6 +8,8 @@
 
 ## Review component:
 
+- Hide the "Customer reviews" title, if there are no reviews
+
 ### Existing stars:
 
 - 5 separate star images

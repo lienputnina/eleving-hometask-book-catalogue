@@ -21,5 +21,5 @@
 </template>
 
 <script lang="ts" setup>
-const { book, id } = defineProps(['book', 'id']);
+const { book } = defineProps(['book']);
 </script>
