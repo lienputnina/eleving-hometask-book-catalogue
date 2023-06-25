@@ -1,4 +1,8 @@
 <template>
+  <div class="flex">
+    <img src="../../assets/images/backArrow.png" class="w-4 h-4 mt-1" />
+    <NuxtLink :to="`/`" class="hover:underline">Explore</NuxtLink>
+  </div>
   <div class="flex flex-row m-1.5">
     <img
       :src="book.image"
