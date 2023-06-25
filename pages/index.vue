@@ -4,7 +4,7 @@
     name="book-search"
     type="search"
     placeholder="Search for a book"
-    class="flex flex-grow border-slate-200 border-2 rounded h-8 text-slate-700 py-4 pl-9 bg-transparent w-full max-w-lg"
+    class="flex flex-grow border-slate-200 border-2 rounded h-8 text-slate-700 py-4 pl-9 bg-transparent w-full max-w-lg shadow-md shadow-slate-100 hover:shadow-lg hover:shadow-slate-200"
     style="
       background-image: url(../assets/images/search.png);
       background-repeat: no-repeat;

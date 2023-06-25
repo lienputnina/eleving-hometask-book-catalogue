@@ -13,18 +13,17 @@
       <input
         id="review-input"
         type="text"
-        class="border-slate-200 border-2 rounded p-1.5 w-full"
+        class="border-slate-200 border-2 rounded p-1.5 w-full shadow-md shadow-slate-100 hover:shadow-lg hover:shadow-slate-200"
         v-model="reviewText"
         aria-labelledby="review-label"
       />
       <button
-        class="border-cyan-700 border-2 rounded-2xl w-full p-1.5 mt-4 text-sm text-cyan-700 font-bold"
+        class="border-cyan-700 border-2 rounded-2xl w-full p-1.5 mt-4 text-sm text-cyan-700 font-bold hover:text-cyan-600 hover:border-cyan-600 shadow-slate-100 hover:shadow-lg hover:shadow-slate-200"
         type="button"
         @click="onSubmit()"
       >
         Submit review
       </button>
-      <!-- <p v-if="!reviewText">Please add a review.</p> -->
     </form>
     <p
       class="bg-sky-200 rounded-md py-1 px-1.5 font-bold mt-8 w-fit"
