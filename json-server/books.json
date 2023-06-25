@@ -11,7 +11,9 @@
       "isbn": "9780446310789",
       "price": "29.99€",
       "year": "1995",
-      "reviews": ["No bird was killed. Confusing."]
+      "reviews": [
+        "No bird was killed. Confusing."
+      ]
     },
     {
       "id": 2,
@@ -24,7 +26,9 @@
       "isbn": "9780451524935",
       "price": "39.99€",
       "year": "1995",
-      "reviews": ["USSR taken to the extreme."]
+      "reviews": [
+        "USSR taken to the extreme."
+      ]
     },
     {
       "id": 3,
@@ -39,8 +43,7 @@
       "reviews": [
         "Too many words.",
         "Good analysis of the social situations of men and women.",
-        "Good book.",
-        "Good stuff"
+        "Good book."
       ]
     },
     {
@@ -77,7 +80,10 @@
       "publisher": "The Russian Messenger",
       "isbn": "9781400079988",
       "price": "49.99€",
-      "year": "1995"
+      "year": "1995",
+      "reviews": [
+        "A lot of war."
+      ]
     },
     {
       "id": 7,

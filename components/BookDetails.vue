@@ -15,7 +15,7 @@
   </div>
   <div class="flex flex-row mt-5 mb-5 ml-2 self-center">
     <p class="text-slate-700 mr-2">{{ book.rating }}</p>
-    <img src="../../assets/images/rating.png" class="w-24 h-5" />
+    <img src="../assets/images/rating.png" class="w-24 h-5" />
   </div>
   <p class="text-slate-700 text-left ml-2 text-sm">{{ book.description }}</p>
 </template>

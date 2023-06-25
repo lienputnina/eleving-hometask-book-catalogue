@@ -5,7 +5,7 @@
       <label id="review-label" class="font-bold mb-5">
         Rate the book
         <img
-          src="../../assets/images/rating.png"
+          src="../assets/images/rating.png"
           alt="book rating stars"
           class="w-24 h-5 mt-2"
         />
